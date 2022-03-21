@@ -1,0 +1,26 @@
+<div class="contenedor">
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="{{ character.image }}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ character.name }}</h5>
+      <p class="card-text">
+        Id: {{ character.id }} <br />
+        Status: {{ character.status }} <br />
+        Species {{ character.species }} <br />
+        Gender: {{ character.gender }} <br />
+        Origin: {{ character.origin }} <br />
+        Location: {{ character.location}}
+      </p>
+
+      <button class="btn btn-warning mr-2 boton" (click)="deleteCharacter()">Delete</button>
+
+      <button class="btn btn-warning mr-2 boton" *ngIf="character.status == 'Alive'" (click)="updateStatus('Dead')">Dead</button>
+      <button class="btn btn-warning mr-2 boton" *ngIf="character.status == 'Dead'" (click)="updateStatus('Alive')">Alive</button>
+
+    </div>
+  </div>
+</div>

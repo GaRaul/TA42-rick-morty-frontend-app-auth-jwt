@@ -1,0 +1,12 @@
+.contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.boton {
+  background-color: rgb(255, 193, 77);
+  color: black;
+  text-align: center;
+  margin-right: 2%;
+}

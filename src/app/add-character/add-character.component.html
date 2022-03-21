@@ -1,0 +1,49 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!enviado">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="character.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" class="form-control" id="status" required [(ngModel)]="character.status" name="status">
+      </div>
+
+      <div class="form-group">
+        <label for="species">Species</label>
+        <input type="text" class="form-control" id="species" required [(ngModel)]="character.species" name="species">
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" class="form-control" id="gender" required [(ngModel)]="character.gender" name="gender">
+      </div>
+
+      <div class="form-group">
+        <label for="origin">Origin</label>
+        <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin" name="origin">
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" required [(ngModel)]="character.location" name="location">
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" id="image" required [(ngModel)]="character.image" name="image">
+      </div>
+
+
+      <button class="btn btn-success" (click)="saveCharacter()">Save</button>
+
+    </div>
+
+    <div *ngIf="enviado">
+      <button class="btn btn-success" (click)="newCharacter()">Add</button>
+    </div>
+  </div>
+</div>
